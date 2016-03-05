@@ -42,6 +42,8 @@
 
 #include <asm/current.h>
 
+#define WT_SUBSYSTEM_REASTART_LEVEL "related"
+
 static int enable_debug;
 module_param(enable_debug, int, S_IRUGO | S_IWUSR);
 
