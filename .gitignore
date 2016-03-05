@@ -83,6 +83,8 @@ GTAGS
 *.orig
 *~
 \#*#
+/zip
+*.sh
 
 #
 # Leavings from module signing
