@@ -146,4 +146,46 @@ struct device_clnt_data {
 	void                         *usr_data;
 };
 
+static inline int sensor_mgr_init_threshold(struct device *dev,
+				struct threshold_info *thresh_inp,
+				int sensor_id, int32_t high_temp,
+				int32_t low_temp,
+				void (*callback)(struct therm_threshold *))
+{
+	return -ENOSYS;
+}
+static inline int sensor_mgr_convert_id_and_set_threshold(
+			struct threshold_info *thresh_inp)
+{
+	return -ENOSYS;
+}
+static inline int sensor_mgr_set_threshold(uint32_t zone_id,
+			struct sensor_threshold *threshold)
+{
+	return -ENOSYS;
+}
+static inline void sensor_mgr_remove_threshold(struct device *dev,
+				struct threshold_info *thresh_inp)
+{
+}
+static inline struct device_clnt_data *devmgr_register_mitigation_client(
+				struct device *dev,
+				const char *device_name,
+				void (*callback)(struct device_clnt_data *,
+				union device_request *, void *))
+{
+	return NULL;
+}
+static inline int devmgr_client_request_mitigation(
+					struct device_clnt_data *clnt,
+					enum device_req_type type,
+					union device_request *req)
+{
+	return -ENOSYS;
+}
+static inline void devmgr_unregister_mitigation_client(
+					struct device *dev,
+					struct device_clnt_data *clnt)
+{
+}
 #endif /*__MSM_THERMAL_H*/
